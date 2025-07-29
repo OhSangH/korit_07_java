@@ -76,6 +76,7 @@ public class Scanner01 {
 //        System.out.print("이름을 입력하세요. >>> ");
 //        String name = scanner.nextLine();
 //        System.out.println(name + " 학생의 점수는 " + score + "입니다.");
+
         // 문제 2의 풀이 2 : nextLine()을 사용하지 않고 푸는 방법
         System.out.print("점수를 입력하세요. >>> ");
         double score = scanner.nextDouble();
