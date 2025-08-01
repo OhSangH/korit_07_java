@@ -2,30 +2,46 @@ package com.ch08_methods;
 
 import java.util.Scanner;
 
-
-//수업 내용과 다르게 내가 작성한 코드
-//수업 내용으로 작성한 코드는 md 파일로 따로 작성
-@SuppressWarnings("StringConcatenationInLoop")
-public class Method02 {
-    /*
-        별 찍기를 메서드화 시키기.
-        call4() 유형으로 작성 -> argument 와 return 값을 가지는 메서드
-    */
-
-    public static String getStar(int row, int option) {
+public class Method04 {
+    public static void getStar() {
         String result = "잘못된 번호입니다.";
+        int rows = getRow();
+        int option = getOption();
         switch (option) {
             case 1:
-                return leftIncrease(row);
+                System.out.println(leftIncrease(rows));
+                break;
             case 2:
-                return rightIncrease(row);
+                System.out.println(rightIncrease(rows));
+                break;
             case 3:
-                return leftDecrease(row);
+                System.out.println(leftDecrease(rows));
+                break;
             case 4:
-                return rightDecrease(row);
+                System.out.println(rightDecrease(rows));
+                break;
             default:
-                return result;
+                System.out.println(result);
+                break;
         }
+    }
+
+    private static int getRow() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("몇 줄 짜리 별을 생성할까요? >>>> ");
+        int rows = sc.nextInt();
+        return rows;
+    }
+
+    private static int getOption() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1. 왼쪽으로 치우친 증가하는 별.");
+        System.out.println("2. 오른쪽으로 치우친 증가하는 별.");
+        System.out.println("3. 왼쪽으로 치우친 감소하는 별.");
+        System.out.println("4. 오른쪽으로 치우친 감소하는 별.");
+        System.out.print("선택하세요. >>>> ");
+        int option = sc.nextInt();
+        return option;
     }
 
     private static String leftIncrease(int row) {
@@ -79,22 +95,6 @@ public class Method02 {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int rowOfStars, choice;
-        String starResult;
-
-        System.out.print("몇 줄 짜리 별을 생성할까요? >>>> ");
-        rowOfStars = sc.nextInt();
-
-        System.out.println("1. 왼쪽으로 치우친 증가하는 별.");
-        System.out.println("2. 오른쪽으로 치우친 증가하는 별.");
-        System.out.println("3. 왼쪽으로 치우친 감소하는 별.");
-        System.out.println("4. 오른쪽으로 치우친 감소하는 별.");
-        System.out.print("선택하세요. >>>> ");
-        choice = sc.nextInt();
-
-        starResult = getStar(rowOfStars, choice);
-        System.out.print(starResult);
-
+        getStar();
     }
 }
