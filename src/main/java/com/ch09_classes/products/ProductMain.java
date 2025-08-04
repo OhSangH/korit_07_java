@@ -5,7 +5,7 @@ public class ProductMain {
         Product product1 = new Product();
         Product product2 = new Product(9876564);
         Product product3 = new Product("USB-C 케이블");
-        Product product4 = new Product("GFlip6",951753);
+        Product product4 = new Product("GFlip6", 951753);
 
         product1.productNum = 123456;
         product1.productName = "LG엘패드";
