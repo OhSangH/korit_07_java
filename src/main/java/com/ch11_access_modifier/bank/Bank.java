@@ -67,6 +67,8 @@ public class Bank {
     private int pinNumber;
     private int balance;
     private static final Scanner sc = new Scanner(System.in);
+
+
     public Bank() {
     }
 
@@ -91,6 +93,8 @@ public class Bank {
         setBalance(balance);
         setPinNumber(pinNumber);
     }
+
+
 
     public String getAccountHolder() {
         return accountHolder;
@@ -127,6 +131,8 @@ public class Bank {
         }
         this.pinNumber = pinNumber;
     }
+
+
 
     public void deposit(int amount, int inputPin) {
         if (inputPin != pinNumber) {
