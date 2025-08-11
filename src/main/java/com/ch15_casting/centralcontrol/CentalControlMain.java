@@ -1,4 +1,5 @@
 package com.ch15_casting.centralcontrol;
+
 /*
     프로그램 구현 사항
     interface Power을 implement한 다양한 클래스를 정의할 예정
@@ -36,13 +37,30 @@ public class CentalControlMain {
         //이하의 코드는 Powers 생성하면서 indexNumber가 고정되기 때문에 예시만 보여줄 에정이다.
 //        Power[] powers = {new Computer(), new AirConditioner(), new Speaker()};
 
-        CentralControl centralControl = new CentralControl(new Power[5]);
+        CentralControl centralControl = new CentralControl(new Power[10]);
         centralControl.addDevice(computer1);
         centralControl.addDevice(airConditioner1);
         centralControl.addDevice(speaker1);
-        centralControl.addDevice(speaker1);
-        centralControl.addDevice(speaker1);
-        centralControl.addDevice(speaker1);
+
+
+        Mouse mouse1 = new Mouse();
+        Led led1 = new Led();
+        centralControl.addDevice(mouse1);
+        centralControl.addDevice(led1);
+
+        Printer printer1 = new Printer();
+        centralControl.addDevice(printer1);
+
+        centralControl.powerOn();
+        System.out.println(led1.powerStatus);
+        centralControl.powerOff();
+        System.out.println(led1.powerStatus);
+
+        System.out.println("=".repeat(40));
+        centralControl.showInfo();
+
+        System.out.println();
+        centralControl.performSpecificMethod();
 
     }
 }
