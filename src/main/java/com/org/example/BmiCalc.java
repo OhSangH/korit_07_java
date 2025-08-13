@@ -16,7 +16,9 @@ public class BmiCalc {
     private double height;
     private double weight;
 
-    public BmiCalc(){
+
+
+    public void calcBMI() {
         Scanner sc = new Scanner(System.in);
         System.out.print("이름 입력하세요 >>>");
         this.name = sc.nextLine();
@@ -24,9 +26,6 @@ public class BmiCalc {
         this.height = sc.nextDouble();
         System.out.print("몸무게(Kg)를 입력하세요 >>>");
         this.weight = sc.nextDouble();
-    }
-
-    public void calcBMI() {
         calcBMI(name, height, weight);
     }
 
@@ -65,6 +64,14 @@ public class BmiCalc {
     }
 
     public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("이름 입력하세요 >>>");
+//        String name = sc.nextLine();
+//        System.out.print("키(cm)를 입력하세요 >>>");
+//        double height = sc.nextDouble();
+//        System.out.print("몸무게(Kg)를 입력하세요 >>>");
+//        double weight = sc.nextDouble();
+
 
         BmiCalc bmiCalc = new BmiCalc();
         bmiCalc.calcBMI();
