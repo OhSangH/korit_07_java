@@ -3,7 +3,7 @@ package com.ch20_collections;
 import java.util.*;
 
 /*
-    List는 순ㅅ가 있고 중복을 허용하는 반면,
+    List는 순서가 있고 중복을 허용하는 반면,
     Set의 경우 순서는 없고 중복은허용하지 않기 때문에
     List -> Set / 혹은 Set -> List로의 형변환이 중요하다
     예를 들어 List로 설문을 받고 Set을 통해 중복을 제거하면
@@ -82,5 +82,4 @@ public class StrSet {
 
     제주
     민속촌
-
  */
