@@ -43,7 +43,10 @@ public class Main {
         /*
             정수 long의 경우 SQL 문에서는 bigint로 쓴다.
          */
-
+        String s = "1";
+        int a = Integer.parseInt(s);
+        int b = Integer.valueOf(s);
+        System.out.println(b);
 
     }
 }
